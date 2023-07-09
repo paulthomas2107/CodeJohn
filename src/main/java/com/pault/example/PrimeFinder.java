@@ -28,9 +28,19 @@ public class PrimeFinder {
             }
 
         }
+        int diff = 0;
+        int highDiff = 0;
+        String message = "";
         for (int number: primeNumbers) {
-            System.out.println(number);
+            String msg = number + " " + "(" +  (number - diff) + " since " + diff + ")";
+            System.out.println(msg);
+            if ((number - diff) > highDiff) {
+                highDiff = number - diff;
+                message = msg;
+            }
+            diff = number;
         }
+        System.out.println("\nHighest: " + message);
 
     }
 }
