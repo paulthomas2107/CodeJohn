@@ -7,7 +7,7 @@ public class WorstSortEver {
 
         Random rand = new Random();
         List<Integer> numberList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 13; i++) {
             numberList.add(rand.nextInt(10_000));
         }
 
