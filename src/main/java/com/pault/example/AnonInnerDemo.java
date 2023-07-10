@@ -14,6 +14,17 @@ public class AnonInnerDemo {
             }
         };
         bigfoot.makeNoise();
+
+        Runnable myAnonRunnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("I am running....");
+            }
+        };
+
+        myAnonRunnable.run();
+        Thread s = new Thread(myAnonRunnable);
+        s.start();
     }
 }
 

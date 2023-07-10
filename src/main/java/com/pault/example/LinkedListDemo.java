@@ -19,8 +19,8 @@ public class LinkedListDemo {
         namesArrayList.add("George");
         namesArrayList.add("John");
         namesArrayList.add("Ringo");
-        System.out.println(namesArrayList.getLast());
-        namesArrayList.addLast("Lydia");
+        System.out.println(namesArrayList.get(1));
+        namesArrayList.add("Lydia");
         System.out.println( namesArrayList);
 
 
