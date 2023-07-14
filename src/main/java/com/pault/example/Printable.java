@@ -1,5 +1,6 @@
 package com.pault.example;
 
+@FunctionalInterface
 public interface Printable {
-    void print();
+    String print(String prefix, String suffix);
 }

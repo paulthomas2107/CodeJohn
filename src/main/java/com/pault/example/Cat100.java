@@ -16,8 +16,8 @@ public class Cat100 implements Printable{
 
 
     @Override
-    public void print() {
-        log.info("MEOW");
+    public String print(String prefix, String suffix) {
+        return prefix + " !!!! " + suffix;
     }
 
 

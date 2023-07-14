@@ -6,17 +6,22 @@ import lombok.extern.java.Log;
 public class Lambdas {
 
     public static void main(String[] args) {
-        Cat100 myCat = new Cat100();
-        printThing(myCat);
+
+
+        Cat100 cat = new Cat100();
+        log.info(cat.print("Hi", "....."));
 
         // Lambda
-        Printable lambdaPrintable = () -> log.info("Lambda MEOW");
+        Printable lambdaPrintable = (prefix, suffix) -> {
+            log.info(prefix + " " + "MEOW" + suffix);
+            return prefix + " " + "MEOW" + suffix;
+        };
         printThing(lambdaPrintable);
     }
 
 
     static void printThing(Printable thing) {
-        thing.print();
+        thing.print("Oh Hi...","!");
 
     }
 }
