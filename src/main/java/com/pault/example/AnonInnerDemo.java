@@ -1,5 +1,9 @@
 package com.pault.example;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 public class AnonInnerDemo {
 
     public static void main(String[] args) {
@@ -28,7 +32,12 @@ public class AnonInnerDemo {
     }
 }
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 class Animal {
+    int age;
+    String name;
     void makeNoise() {
         System.out.println("Yap");
     }

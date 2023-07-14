@@ -10,10 +10,10 @@ public class GenericsDemo {
     public static void main(String[] args) {
 
         // Generics
-        Printer<Integer> printer = new Printer<>(29);
+        Printer<Cat> printer = new Printer<>(new Cat(12, "Paul"));
         printer.print();
 
-        Printer<Double> printer2 = new Printer<>(29.92);
+        Printer<Dog> printer2 = new Printer<>(new Dog("Doberman", 12.99));
         printer2.print();
 
         ArrayList<Cat> catList = new ArrayList<>();
@@ -22,18 +22,22 @@ public class GenericsDemo {
 
         ArrayList<Object> objList = new ArrayList<>();
         objList.add(new Cat(1, "Paul"));
+        objList.add("Hello, Paul");
 
-        Object what = objList.get(0);
-        if  (what instanceof Cat cat) {
-            log.info(cat.toString());
-        }
+        objList.forEach(o -> {
+            if (o instanceof Cat cat) {
+                log.info(cat.toString());
+            } else {
+                log.info("I am a " + o.getClass());
+            }
+        });
 
 
     }
 }
 
 @Log
-class Printer<T> {
+class Printer<T extends Animal> {
 
     T thingToPrint;
 
@@ -42,6 +46,7 @@ class Printer<T> {
     }
 
     public void print() {
+        thingToPrint.makeNoise();
         log.info("..." + thingToPrint);
 
     }

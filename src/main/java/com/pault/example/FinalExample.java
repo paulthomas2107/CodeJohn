@@ -8,11 +8,6 @@ public class FinalExample {
     }
 }
 
-final class Dog {
-    private String breed;
-    private double price;
-}
-
 // Cant inherit from final class
 class Pooch /*extends Dog */{
 
