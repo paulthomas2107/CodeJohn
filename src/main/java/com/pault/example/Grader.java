@@ -3,7 +3,7 @@ package com.pault.example;
 public class Grader {
     public char determineLetterGrade(int numberGrade) {
         if (numberGrade < 0) {
-            throw new IllegalArgumentException("Number Grade cannot be > 0");
+            throw new IllegalArgumentException("Number Grade cannot be < 0");
         }
         else if (numberGrade < 60) {
             return 'F';
