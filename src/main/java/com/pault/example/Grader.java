@@ -5,19 +5,18 @@ public class Grader {
         if (numberGrade < 0) {
             throw new IllegalArgumentException("Number Grade cannot be < 0");
         }
-        else if (numberGrade < 60) {
+        if (numberGrade < 60) {
             return 'F';
         }
-        else if (numberGrade < 70) {
+        if (numberGrade < 70) {
             return 'D';
         }
-        else if (numberGrade < 80) {
+        if (numberGrade < 80) {
             return 'C';
         }
-        else if (numberGrade < 90) {
+        if (numberGrade < 90) {
             return 'B';
-        }
-        else {
+        } else {
             return 'A';
         }
     }
