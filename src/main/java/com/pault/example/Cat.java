@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cat extends Animal {
+public class Cat extends Animal implements Serializable {
     int age;
     String name;
     public void makeNoise() {
