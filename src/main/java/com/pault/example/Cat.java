@@ -9,13 +9,12 @@ import java.io.Serializable;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
 @VeryImportant
 @Log
 public class Cat extends Animal implements Serializable {
-    private final int age;
+    private int age = 0;
     @ImportString
-    private final String name;
+    private String name = null;
 
     @RunImmediately(times = 3)
     public void makeNoise() {
@@ -35,4 +34,10 @@ public class Cat extends Animal implements Serializable {
     }
 
     public Cat() {}
+
+    public Cat(int age, String name) {
+        this.age = age;
+        this.name = name;
+
+    }
 }

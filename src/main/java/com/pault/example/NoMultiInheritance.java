@@ -10,5 +10,8 @@ public class NoMultiInheritance {
         Cat myCat = new Cat(1, "Boo");
         myCat.makeNoise();
         myCat.setName("xx");
+
+        Cog myCog = new Cog();
+        myCog.fetch();
     }
 }
