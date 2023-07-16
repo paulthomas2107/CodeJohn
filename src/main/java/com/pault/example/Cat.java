@@ -3,7 +3,6 @@ package com.pault.example;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.extern.java.Log;
 
 import java.io.Serializable;
@@ -11,13 +10,12 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @VeryImportant
 @Log
 public class Cat extends Animal implements Serializable {
-    int age;
+    private final int age;
     @ImportString
-    String name;
+    private final String name;
 
     @RunImmediately(times = 3)
     public void makeNoise() {
@@ -28,5 +26,12 @@ public class Cat extends Animal implements Serializable {
         log.info("Munch");
     }
 
+    private static void heyThisIsPrivate() {
+        log.info("How did you call this ?");
+    }
+
+    private static void thisIsPrivateAndStaticMethod() {
+        log.info("I am private and static");
+    }
 
 }

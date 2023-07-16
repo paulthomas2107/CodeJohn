@@ -19,7 +19,7 @@ public class GenericsDemo {
         printer2.print();
 
         ArrayList<Cat> catList = new ArrayList<>();
-        catList.add(new Cat());
+        catList.add(new Cat(12, "paul"));
         log.info(catList.toString());
 
         ArrayList<Object> objList = new ArrayList<>();
