@@ -34,4 +34,5 @@ public class Cat extends Animal implements Serializable {
         log.info("I am private and static");
     }
 
+    public Cat() {}
 }
