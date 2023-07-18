@@ -16,6 +16,7 @@ public class QuickSort {
             numbers[i] = new Random().nextInt(200);
         }
 
+        log.info(Arrays.toString(numbers));
         log.info(String.valueOf(new TreeSet<>(new ArrayList<>(Arrays.stream(numbers).boxed().collect(Collectors.toSet())))));
 
     }
