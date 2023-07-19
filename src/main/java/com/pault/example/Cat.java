@@ -10,14 +10,19 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @VeryImportant
+@AllArgsConstructor
 @Log
 public class Cat extends Animal implements Serializable {
     private int age = 0;
     @ImportString
     private String name = null;
+    private String catFoodPreference;
+
 
     @RunImmediately(times = 3)
+    @Override
     public void makeNoise() {
+        super.makeNoise();
         log.info("MEOW");
     }
 

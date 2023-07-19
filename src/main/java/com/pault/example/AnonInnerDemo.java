@@ -3,6 +3,7 @@ package com.pault.example;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.java.Log;
 
 public class AnonInnerDemo {
 
@@ -35,10 +36,13 @@ public class AnonInnerDemo {
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Log
 class Animal {
     int age;
     String name;
     void makeNoise() {
-        System.out.println("Yap");
+        log.info("YAP !");
     }
+
+
 }
